@@ -6,10 +6,10 @@ import pandas as pd
 import os
 
 
-os.environ['OPENAI_API_KEY'] =  "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"
+# os.environ['OPENAI_API_KEY'] =  credentials.API_KEY
 
 
-#@measure_time.measure_time
+@measure_time.measure_time
 def ask_agent(dataset: str, prompt: str, sep=",") -> str:
     try:
         df = pd.read_csv(dataset, sep=sep)
