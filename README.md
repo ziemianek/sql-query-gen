@@ -41,7 +41,7 @@ To use this application, follow these steps:
 2. Change into the project directory:
 
     ```bash
-    cd sql-query-generator
+    cd sql-query-gen
     ```
 
 3. Install the required dependencies using pip:
