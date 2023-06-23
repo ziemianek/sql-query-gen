@@ -27,15 +27,19 @@ To run this project locally, make sure you have the following requirements insta
 To use this application, follow these steps:
 
 1. Clone the repository to your local machine:
+
     git clone https://github.com/your-username/sql-query-generator.git
 
 2. Change into the project directory:
+
     cd sql-query-generator
 
 3. Install the required dependencies using pip:
+
     pip install -r requirements.txt
 
 4. Start the Django development server:
+
     python manage.py runserver
 
 5. Open your web browser and navigate to http://localhost:8000 to access the application.
