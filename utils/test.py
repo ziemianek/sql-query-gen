@@ -4,9 +4,9 @@ from . import generate_sql_query
 def main():
     prompts = [
         "create a table for employee",
-        # "select users older than 30",
-        # "remove birth_date from students table",
-        # "add 3 records to customers table",
+        "select users older than 30",
+        "remove birth_date from students table",
+        "add 3 records to customers table",
     ]
 
     for prompt in prompts:
