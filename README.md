@@ -28,25 +28,39 @@ To use this application, follow these steps:
 
 1. Clone the repository to your local machine:
 
-    git clone https://github.com/your-username/sql-query-generator.git
+    on windows:
+    ```bash
+    git clone https://github.com/ziemianek/sql-query-gen.git
+    ```
+
+    on linux/mac:
+    ```bash
+    git clone git@github.com:ziemianek/sql-query-gen.git
+    ```
 
 2. Change into the project directory:
 
+    ```bash
     cd sql-query-generator
+    ```
 
 3. Install the required dependencies using pip:
 
+    ```bash
     pip install -r requirements.txt
+    ```
 
 4. Start the Django development server:
 
+    ```bash
     python manage.py runserver
+    ```
 
 5. Open your web browser and navigate to http://localhost:8000 to access the application.
 
 6. Input your desired query prompt and click the "Generate Query" button.
 
-**The generated SQL query will be displayed on the page.**
+7. **The generated SQL query will be displayed on the page.**
 
 ### Conclusion
 With this SQL Query Generator application, you can quickly generate complex SQL queries by providing simple prompts. The integration with OpenAI's API allows for efficient and accurate query generation based on user input. Feel free to explore the codebase, customize the application, and enhance its capabilities further!
