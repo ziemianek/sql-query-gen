@@ -1,3 +1,5 @@
 # todo:
-* hide django secret key
-* generate and hide new openai api key
+* add users and sign in option
+* add history for every user
+* create ci/cd pipeline
+* deploy project on aws
