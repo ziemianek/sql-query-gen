@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content%}
+<div class="container">
+    <p>The Custom SQL Query Generator is an application that utilizes the OpenAI API and the GPT-3.5 model to generate custom SQL queries. The application is designed to assist users in constructing tailored queries to retrieve, manipulate, and analyze data stored in relational databases.</p>
+    <p>By leveraging the powerful capabilities of the GPT-3.5 model and OpenAI's API, users can input their query requirements using natural language prompts. The model processes these prompts and generates SQL queries that align with the specified criteria.</p>
+    <p>The application provides an intuitive user interface where users can interact and input their desired query details. Once the prompt is submitted, the OpenAI API sends it to the GPT-3.5 model for query generation. The resulting SQL query is then returned as a response to the user.</p>
+    <p>The Custom SQL Query Generator ensures the generated queries conform to the syntax and conventions of the specific database system being used. It handles various aspects of query construction, including table and column names, conditions, joins, and other SQL components.</p>
+    <p>With this application, users can streamline the process of constructing custom SQL queries, saving time and effort. It empowers users, even those without extensive SQL knowledge, to generate complex and tailored queries efficiently.</p>
+    <p>The Custom SQL Query Generator finds applications in diverse domains, such as business intelligence, data analysis, and decision-making processes. It simplifies the querying process, allowing users to focus on extracting valuable insights from their data without getting bogged down by the complexities of SQL query construction.</p>
+    <p>In conclusion, the Custom SQL Query Generator harnesses the OpenAI API and the GPT-3.5 model to automate and optimize the generation of custom SQL queries. Its user-friendly interface and intelligent query generation capabilities make it a valuable tool for data professionals and individuals working with relational databases.</p>    
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block custom_css %} 
+<link rel="stylesheet" href="{% static 'css/response-box.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/input-prompt.css' %}">
+{% endblock custom_css %}
+
+{% block title %} Query Generator {% endblock title %}
+
+{% block jumbotron %} {% endblock jumbotron %}
+
+{% block content %}
+<div class="mt-5 container-fluid d-flex flex-column justify-content-center align-items-center" style="min-height: 500px;">
+    <h2>Generated query:</h2>
+    <pre class="p-5"><code class="language-css">{{ response }}</code></pre>
+    <form action="" method="post" class="p-5 d-flex flex-column justify-content-center align-items-center">
+        {% csrf_token %}
+        {% for field in form %} 
+        <p>{{field.label_tag}}</p>
+        {{field}}
+        {% endfor %}
+        <button type="submit" class="btn btn-primary m-5">Generate</button>
+    </form>    
+</div>
+<script src="{% static 'js/copy.js' %}"></script>
+{% endblock content %}
