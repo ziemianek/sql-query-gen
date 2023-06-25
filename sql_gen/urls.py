@@ -20,7 +20,9 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('generate/', include('generate.urls')),
     path('', views.home_view, name="home-view"),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('generate/', include('generate.urls')),
+    path('signup/', views.SignUpView.as_view(), name="signup-view")
 ]

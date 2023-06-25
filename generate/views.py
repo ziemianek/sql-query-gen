@@ -1,8 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from .forms import PromptForm
 from utils import generate_sql_query
 
 
+@login_required  # (login_url='/signup/')
 def generate_view(request):
     prompt = ""
     response = ""

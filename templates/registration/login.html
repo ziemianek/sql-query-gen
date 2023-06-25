@@ -1,0 +1,19 @@
+{% if form.errors %} 
+    <p>Your username or password was incorrect. Try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+        <p>You don't have permissions for this page.</p>
+    {% else %}
+        <p>Please log in to see this page.</p>
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+<p>Don't have an account? <a href="{% url 'signup-view' %}">Register for free!</a></p>
