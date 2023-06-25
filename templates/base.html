@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}"> 
     {% block custom_css %}{% endblock custom_css %}
-    <title>SQL Gen - {% block title %}{% endblock %}</title>
+    <title>SQL Gen - {% block title %}{% endblock title %}</title>
 </head>
 <body>
   <header>
+    {% block navbar %}
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'home-view' %}">SQL Query Generator</a>
@@ -28,17 +29,23 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'generate-view' %}">Generate SQL</a>
               </li>
+              {% if user.is_authenticated %}
               <li class="nav-item">
-                {% if user.is_authenticated %}
-                <a class="nav-link" href="{% url 'logout' %}?next=/">Log out</a>
-                {% else %}
-                <a class="nav-link" href="{% url 'signup-view' %}?next={{ request.path }}">Sign up</a>
-                {% endif %}
+                <a class="nav-link disabled" href="#">Profile</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}?next=/">Log out</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">Sign in</a>
+              </li>
+                {% endif %}
             </ul>
           </div>
         </div>
     </nav>
+    {% endblock navbar %}
     {% block jumbotron %}
     <div class="p-5 text-center">
       <h1 class="mb-3">SQL Query Generator</h1>
@@ -51,12 +58,13 @@
     {% block content %}
     {% endblock content %}
   </main>
+  {% block footer %}
   <footer class="bg-dark text-center text-white"> 
     <div class="container p-4 pb-0">
       {% if not user.is_authenticated %}
       <section class="">
         <p class="d-flex justify-content-center align-items-center">
-            <a href="{% url 'signup-view' %}">Register for free!</a>
+            <a href="{% url 'signup-view' %}" class="text-white">Register for free</a>
         </p>
       </section>
       {% endif %}
@@ -88,6 +96,7 @@
       <a class="text-white" href="#">mziemianek</a>
     </div>
   </footer>
+  {% endblock footer %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
