@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} History {% endblock title %}
+
+{% block jumbotron %} 
+    <h1>Welcome, {{ user }} </h1>
+    <h3>here is your history: </h3>
+{% endblock jumbotron %}
+
+{% block content %}
+    {% for record in history_list %}
+        <p> Prompt: {{ record.prompt }} </p>
+        <p> Query: {{ record.query }} </p>
+    {% endfor %}
+{% endblock content %}
