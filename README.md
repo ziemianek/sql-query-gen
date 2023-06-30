@@ -1,8 +1,11 @@
 # todo:
 - [x] add users and sign in option
 - [x] add history for every user
+- [ ] create sessions
+- [ ] resolve current issues
 - [ ] create ci/cd pipeline
-- [ ] deploy project on aws
+- [ ] limit usage to 10-20 request per minute per user
+- [ ] deploy project
 
 # SQL Query Generator
 
