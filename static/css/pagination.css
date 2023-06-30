@@ -1,0 +1,39 @@
+.dataTables_length { grid-area: show; }
+
+
+.dataTables_filter { 
+    grid-area: search; 
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+
+.table { grid-area: table; }
+
+
+.dataTables_info { grid-area: info; }
+
+
+.dataTables_paginate { 
+    grid-area: pages; 
+}
+
+
+.dataTables_wrapper {
+    display: grid;
+    grid-template-areas:
+    'show show show search search search'
+    'table table table table table table'
+    'info info info info info info'
+    'pages pages pages pages pages pages';
+  gap: 10px;
+  padding: 10px;
+}
+
+
+.paginate_button {
+    cursor: pointer;
+    padding: 10px 20px 10px 0px;
+    text-align: center;
+}
+
