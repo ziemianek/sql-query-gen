@@ -1,8 +1,8 @@
 # todo:
-* add users and sign in option
-* add history for every user
-* create ci/cd pipeline
-* deploy project on aws
+- [x] add users and sign in option
+- [x] add history for every user
+- [ ] create ci/cd pipeline
+- [ ] deploy project on aws
 
 # SQL Query Generator
 
