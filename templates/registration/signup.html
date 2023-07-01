@@ -15,31 +15,21 @@
                   <div class="card-body p-5">
                     <h2 class="text-uppercase text-center mb-5">Create an account</h2>
       
-                    <form method="post" action="{% url 'home-view' %}">
-
+                    <form method="post" action="{% url 'signup-view' %}">
                       {% csrf_token %}
+                      {% for field in form %}
                       <div class="form-outline mb-4">
-                        {{ form.username }}
-                        <label class="form-label">{{ form.username.label }}</label>
+                        {{ field }}
+                        <label class="form-label">{{ field.label }}</label>
                       </div>
-      
-                      <div class="form-outline mb-4">
-                        {{ form.password1 }}
-                        <label class="form-label">{{ form.password1.label }}</label>
-                      </div>
-      
-                      <div class="form-outline mb-4">
-                        {{ form.password2 }}
-                        <label class="form-label">{{ form.password2.label }}</label>
-                      </div>
-            
+                      {% endfor %}            
                       <div class="d-flex justify-content-center">
                         <input type="submit" value="Sign up" class="btn btn-primary btn-lg btn-block">
+                        <input type="hidden" name="next" value="{{ next }}">
                       </div>
       
-                      <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="{% url 'login' %}"
+                      <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="{% url 'login' %}"
                           class="fw-bold text-body"><u>Login here</u></a></p>
-      
                     </form>
       
                   </div>
