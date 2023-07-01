@@ -21,11 +21,11 @@
                 <div class="card" style="border-radius: 15px;">
                   <div class="card-body p-5">
                     {% if form.errors %} 
-                        <h2 class="text-uppercase text-center mb-5">Incorrect username or password</h2>
+                        <h2 class="text-uppercase text-center mb-5" style="color: red;">Incorrect username or password</h2>
                     {% else %}
                         <h2 class="text-uppercase text-center mb-5">Sign in to your account</h2>
                     {% endif %}
-                    <form method="post" action="{% url 'home-view' %}">
+                    <form method="post" action="{% url 'login' %}">
                         {% csrf_token %}
                       <div class="form-outline mb-4">
                         {{ form.username }}
