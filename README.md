@@ -1,12 +1,3 @@
-# todo:
-- [x] add users and sign in option
-- [x] add history for every user
-- [x] create sessions
-- [ ] resolve current issues
-- [ ] create ci/cd pipeline
-- [ ] limit usage to 10-20 request per minute per user
-- [ ] deploy project
-
 # SQL Query Generator
 
 ### SQL Query Generator using OpenAI API
