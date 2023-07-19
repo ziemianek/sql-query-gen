@@ -1,3 +1,8 @@
+# todo:
+-  [ ] dockerize this app
+-  [ ] add script for setting up credentials / support reading them from .env file
+-  [ ] modify `How to use` section of README
+
 # SQL Query Generator
 
 ### SQL Query Generator using OpenAI API
